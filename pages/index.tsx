@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NavBar from '@/components/NavBar';
+import MobileBrowserHeader from '@/components/MobileBrowserHeader';
 import { useSession } from 'next-auth/react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -78,12 +79,13 @@ export default function Home() {
         />
       </Head>
       <div className="bg-[#090d13] text-white min-h-screen font-sans">
-        <NavBar />
+        <div className="md:hidden"><MobileBrowserHeader /></div>
+          <NavBar />
         
         {/* Hero Section */}
         <section className="container hero max-w-6xl mx-auto px-6 py-12 md:py-24" id="home">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="hero-copy-area">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="hero-copy-area text-center md:text-left">
               <div className="hero-lead reveal">
                 <h1 className="text-4xl md:text-5xl font-black leading-tight">
                   অনলাইন ইলমুস সরফ কোর্স{' '}

@@ -1,11 +1,7 @@
-node_modules
-.next
-.env.local
-.env
+node_modules/
+.next/
+.env*
 .DS_Store
-coverage
-dist
+coverage/
 
-.env*
-
-.env*
+dist/
