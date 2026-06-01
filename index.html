@@ -1,0 +1,2041 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="At Taheel Academy online Ilmus Sarf course with live support and structured Arabic grammar lessons.">
+  <meta property="og:title" content="At Taheel Academy">
+  <meta property="og:description" content="Online Ilmus Sarf course with live support and structured Arabic grammar lessons.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="At Taheel Academy">
+  <meta name="twitter:description" content="Online Ilmus Sarf course with live support and structured Arabic grammar lessons.">
+  <meta name="twitter:image" content="logo.png">
+  <title>At Taheel Academy | ইলমুস সরফ কোর্স</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800;900&family=Inter:wght@500;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d13;
+      --mint: #00e6a6;
+      --mint-deep: #00c98f;
+      --gold: #fbbf24;
+      --gold-deep: #f59e0b;
+      --cyan: #38bdf8;
+      --white: #ffffff;
+      --text: #cbd5e1;
+      --muted: #94a3b8;
+      --disabled: #64748b;
+      --glass: rgba(255, 255, 255, 0.06);
+      --glass-strong: rgba(255, 255, 255, 0.09);
+      --line: rgba(255, 255, 255, 0.1);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      --neo: -8px -8px 20px rgba(255, 255, 255, 0.035), 12px 16px 34px rgba(0, 0, 0, 0.54);
+      --inset: inset 5px 5px 12px rgba(0, 0, 0, 0.55), inset -4px -4px 12px rgba(255, 255, 255, 0.035);
+      --max: 1440px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--white);
+      font-family: "Hind Siliguri", "Inter", system-ui, sans-serif;
+      background: var(--bg);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -5;
+      background:
+        radial-gradient(circle at 82% 9%, rgba(0, 230, 166, 0.08), transparent 700px),
+        radial-gradient(circle at 5% 90%, rgba(245, 158, 11, 0.06), transparent 600px),
+        linear-gradient(180deg, #090d13 0%, #0d121a 42%, #090d13 100%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      opacity: 0.03;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+      background-size: 3px 3px;
+      mix-blend-mode: screen;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .aurora {
+      position: fixed;
+      z-index: -3;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    .aurora.mint {
+      top: -170px;
+      right: -150px;
+      width: 700px;
+      height: 700px;
+      background: var(--mint);
+      filter: blur(160px);
+      opacity: 0.08;
+    }
+
+    .aurora.gold {
+      left: -170px;
+      bottom: -170px;
+      width: 600px;
+      height: 600px;
+      background: var(--gold-deep);
+      filter: blur(180px);
+      opacity: 0.06;
+    }
+
+    .particle {
+      position: fixed;
+      z-index: -2;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.42);
+      box-shadow: 0 0 18px rgba(0, 230, 166, 0.34);
+      animation: floatParticle 24s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .particle:nth-child(3) { left: 12%; top: 18%; animation-duration: 26s; }
+    .particle:nth-child(4) { left: 74%; top: 27%; animation-duration: 30s; animation-delay: -8s; }
+    .particle:nth-child(5) { left: 49%; top: 13%; animation-duration: 22s; animation-delay: -14s; }
+    .particle:nth-child(6) { left: 86%; top: 70%; animation-duration: 28s; animation-delay: -4s; }
+    .particle:nth-child(7) { left: 19%; top: 76%; animation-duration: 25s; animation-delay: -11s; }
+
+    @keyframes floatParticle {
+      0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.16; }
+      45% { transform: translate3d(18px, -30px, 0); opacity: 0.5; }
+      70% { transform: translate3d(-12px, 18px, 0); opacity: 0.24; }
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin-inline: auto;
+    }
+
+    .glass {
+      position: relative;
+      overflow: hidden;
+      background: var(--glass);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-120%) skewX(-18deg);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.11), transparent);
+      transition: transform 900ms ease;
+      pointer-events: none;
+    }
+
+    .glass:hover::before {
+      transform: translateX(120%) skewX(-18deg);
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-head {
+      max-width: 830px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    
+
+    .section-title {
+      margin-top: 18px;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .section-copy {
+      max-width: 720px;
+      margin: 16px auto 0;
+    }
+
+    .nav-shell {
+      position: sticky;
+      top: 18px;
+      z-index: 50;
+      padding: 0 16px;
+    }
+
+    .nav-dock {
+      width: min(100%, 1140px);
+      height: 72px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 0 18px 0 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--mint);
+      font-family: "Inter", "Hind Siliguri", sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 24px rgba(251, 191, 36, 0.18), 0 0 20px rgba(0, 230, 166, 0.12);
+    }
+
+    .brand span {
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+      transition: color 250ms ease, background 250ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-links a.active {
+      color: var(--mint);
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 2px;
+      width: 22px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--mint);
+      box-shadow: 0 0 20px var(--mint);
+      transform: translateX(-50%);
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      max-width: 250px;
+      opacity: 1;
+      visibility: visible;
+      overflow: hidden;
+      transition: opacity 250ms ease, transform 250ms ease, visibility 250ms ease, max-width 250ms cubic-bezier(0.4, 0, 0.2, 1), margin 250ms ease, padding 250ms ease, border-color 250ms ease;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .language-switcher.is-hidden {
+      max-width: 0;
+      padding: 4px 0;
+      margin: 0;
+      border-color: transparent;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-5px);
+    }
+
+    .language-switcher button {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      color: var(--text);
+      font: 900 11px/1 "Inter", "Hind Siliguri", sans-serif;
+      background: rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+      transition: color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+    }
+
+    .language-switcher button::before {
+      content: attr(data-label);
+    }
+
+    .language-switcher button:hover,
+    .language-switcher button.is-active {
+      color: #06110d;
+      background: var(--mint);
+      box-shadow: 0 0 22px rgba(0, 230, 166, 0.18);
+    }
+
+    .help-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      transition: color 250ms ease, background 250ms ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .help-link:hover {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .student-profile-button {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--text);
+      font: 900 20px/1 "Inter", "Hind Siliguri", sans-serif;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease, color 220ms ease, background 220ms ease, max-width 220ms cubic-bezier(0.4, 0, 0.2, 1), margin 220ms ease, padding 220ms ease, border-color 220ms ease;
+      max-width: 42px;
+      flex-shrink: 0;
+    }
+
+    .student-profile-button:hover {
+      color: #06110d;
+      background: var(--mint);
+      transform: translateY(-2px);
+    }
+
+    .student-profile-button.is-hidden {
+      max-width: 0;
+      padding: 0;
+      margin: 0;
+      border-color: transparent;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-5px);
+    }
+
+    .student-profile-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #google_translate_element {
+      position: fixed;
+      left: -9999px;
+      top: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .goog-te-banner-frame,
+    body > .skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0 !important;
+    }
+
+    .nav-toggle {
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mobile-menu-button,
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 0;
+      border-radius: 999px;
+      color: #07110d;
+      font-family: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+
+    .nav-cta {
+      padding: 0 22px;
+      background: linear-gradient(180deg, var(--mint), var(--mint-deep));
+      box-shadow: 0 0 28px rgba(0, 230, 166, 0.18);
+    }
+
+    .nav-cta:hover,
+    .btn:hover,
+    .mobile-menu-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 46px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 24px;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      inset: 106px 16px auto 16px;
+      z-index: 45;
+      display: none;
+      padding: 18px;
+      border-radius: 28px;
+      background: rgba(9, 13, 19, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .mobile-drawer a {
+      display: flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 16px;
+      border-radius: 16px;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .mobile-drawer a:hover,
+    .mobile-drawer a:first-child {
+      color: var(--mint);
+      background: rgba(0, 230, 166, 0.08);
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 42px;
+      padding: 122px 0 70px;
+    }
+
+    .hero-copy-area {
+      display: contents;
+    }
+
+    .hero-lead {
+      grid-column: 1;
+      grid-row: 1;
+      align-self: end;
+    }
+
+    .hero-rest {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: start;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin-top: 20px;
+      font-size: clamp(44px, 7vw, 72px);
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(100deg, var(--mint), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      margin-top: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      min-height: 54px;
+      padding: 0 28px;
+      font-size: 17px;
+    }
+
+    .btn-primary {
+      color: #151006;
+      background: linear-gradient(180deg, rgba(251, 191, 36, 0.95), rgba(245, 158, 11, 0.88));
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      box-shadow: var(--neo), 0 18px 45px rgba(245, 158, 11, 0.2);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-visual {
+      position: relative;
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      min-height: 670px;
+      display: grid;
+      place-items: center;
+    }
+
+    .spotlight-ring {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: min(100%, 520px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(0, 230, 166, 0.14), transparent 58%),
+        rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 0 90px rgba(0, 230, 166, 0.12), var(--shadow);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .spotlight-ring::before {
+      content: "";
+      position: absolute;
+      inset: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 230, 166, 0.16);
+      box-shadow: inset 0 0 40px rgba(0, 230, 166, 0.08);
+    }
+
+    .spotlight-ring::after {
+      content: "";
+      position: absolute;
+      inset: -34px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 230, 166, 0.2), transparent 62%);
+      filter: blur(34px);
+      z-index: -1;
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 2;
+      width: min(76%, 385px);
+      height: 530px;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(1.06) contrast(1.06);
+      mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
+    }
+
+    .portrait-badge {
+      position: absolute;
+      z-index: 5;
+      left: 50%;
+      bottom: calc(19% - 15px);
+      width: min(75%, 310px);
+      padding: 14px 18px;
+      border-radius: 20px;
+      text-align: center;
+      background: rgba(9, 13, 19, 0.58);
+      border: 1px solid rgba(0, 230, 166, 0.28);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4), 0 0 26px rgba(0, 230, 166, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transform: translateX(-50%);
+    }
+
+    .portrait-badge strong {
+      display: block;
+      color: var(--white);
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    .portrait-badge span {
+      display: block;
+      margin-top: 3px;
+      color: var(--mint);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .stat-card {
+      position: absolute;
+      z-index: 4;
+      display: grid;
+      gap: 2px;
+      min-width: 150px;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.36);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      animation: statDrift 7s ease-in-out infinite;
+    }
+
+    .stat-card strong {
+      color: var(--white);
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .stat-one { left: 0; top: 21%; }
+    .stat-two { right: 0; top: 43%; animation-delay: -2s; }
+    .stat-three { left: 13%; bottom: 12%; animation-delay: -4s; }
+
+    @keyframes statDrift {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .narrative {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
+      gap: 28px;
+      align-items: stretch;
+      padding: clamp(24px, 5vw, 46px);
+      border-radius: 34px;
+    }
+
+    .narrative h2 {
+      max-width: 680px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .narrative p {
+      margin-top: 20px;
+    }
+
+    .quote-panel {
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(3, 7, 11, 0.36);
+      border: 1px solid rgba(0, 230, 166, 0.16);
+      box-shadow: var(--inset), 0 0 54px rgba(0, 230, 166, 0.08);
+      text-align: center;
+    }
+
+    .arabic {
+      direction: rtl;
+      color: var(--mint);
+      font-family: "Noto Naskh Arabic", serif;
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.45;
+      font-weight: 700;
+      text-shadow: 0 0 34px rgba(0, 230, 166, 0.32);
+    }
+
+    .quote-meaning {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 86px minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    .comparison-card {
+      min-height: 300px;
+      padding: 30px;
+      border-radius: 28px;
+    }
+
+    .comparison-card.problem {
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: var(--neo);
+    }
+
+    .comparison-card.solution {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(0, 230, 166, 0.18);
+    }
+
+    .comparison-card h3,
+    .feature-card h3,
+    .price-card h3 {
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .comparison-card.problem h3 {
+      color: var(--gold);
+    }
+
+    .comparison-card.solution h3 {
+      color: var(--mint);
+    }
+
+    .comparison-card p {
+      margin-top: 16px;
+    }
+
+    .arrow-core {
+      display: grid;
+      place-items: center;
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      color: var(--mint);
+      background: rgba(0, 230, 166, 0.08);
+      border: 1px solid rgba(0, 230, 166, 0.18);
+      box-shadow: 0 0 40px rgba(0, 230, 166, 0.14);
+      font-family: "Inter", sans-serif;
+      font-size: 34px;
+      font-weight: 900;
+      animation: pulseArrow 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulseArrow {
+      0%, 100% { transform: translateX(0); opacity: 0.72; }
+      50% { transform: translateX(6px); opacity: 1; }
+    }
+
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      min-height: 238px;
+      padding: 26px;
+      border-radius: 28px;
+      transition: transform 240ms ease, border-color 240ms ease, background 240ms ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 230, 166, 0.2);
+      background: var(--glass-strong);
+    }
+
+    .feature-card.large {
+      grid-column: span 3;
+      min-height: 300px;
+    }
+
+    .feature-card.medium {
+      grid-column: span 2;
+    }
+
+    .feature-card.small {
+      grid-column: span 2;
+    }
+
+    .feature-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      color: var(--mint);
+      background: rgba(0, 230, 166, 0.08);
+      border: 1px solid rgba(0, 230, 166, 0.16);
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+    }
+
+    .mini-meter {
+      width: 100%;
+      height: 6px;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .mini-meter span {
+      display: block;
+      width: var(--w);
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--mint), var(--cyan));
+      box-shadow: 0 0 18px rgba(0, 230, 166, 0.25);
+    }
+
+    .qualification {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .qualification::before {
+      content: "";
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--mint), transparent);
+      box-shadow: 0 0 18px rgba(0, 230, 166, 0.26);
+    }
+
+    .step-card {
+      position: relative;
+      z-index: 1;
+      min-height: 190px;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      color: #06110d;
+      background: var(--mint);
+      box-shadow: 0 0 24px rgba(0, 230, 166, 0.24);
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+    }
+
+    .step-card p {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.75;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      position: relative;
+      padding: 34px;
+      border-radius: 34px;
+      overflow: hidden;
+    }
+
+    .price-card.madrasha {
+      border-color: rgba(56, 189, 248, 0.24);
+      background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 46%),
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .price-card.general {
+      border-color: rgba(251, 191, 36, 0.36);
+      background:
+        radial-gradient(circle at top right, rgba(251, 191, 36, 0.18), transparent 46%),
+        rgba(255, 255, 255, 0.07);
+      box-shadow: var(--shadow), 0 0 0 1px rgba(251, 191, 36, 0.12), 0 0 74px rgba(251, 191, 36, 0.08);
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 22px;
+      right: -44px;
+      width: 190px;
+      padding: 8px 0;
+      transform: rotate(35deg);
+      color: #1b1304;
+      background: var(--gold);
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .price-tag {
+      display: inline-flex;
+      margin-bottom: 18px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .price-number {
+      margin: 24px 0;
+      color: var(--gold);
+      font-size: clamp(56px, 8vw, 78px);
+      line-height: 0.95;
+      font-weight: 900;
+    }
+
+    .price-card.madrasha .price-number {
+      color: var(--cyan);
+    }
+
+    .price-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .price-meta div {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--text);
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .price-meta strong {
+      display: block;
+      color: var(--white);
+    }
+
+    .included {
+      display: grid;
+      gap: 11px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .included li::before {
+      content: "✓";
+      display: inline-grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 9px;
+      border-radius: 50%;
+      color: #06110d;
+      background: var(--mint);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .roadmap {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 34px;
+    }
+
+    .roadmap::before {
+      content: "";
+      position: absolute;
+      left: 15%;
+      right: 15%;
+      top: 54px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--mint), var(--cyan), var(--gold));
+      box-shadow: 0 0 28px rgba(0, 230, 166, 0.22);
+    }
+
+    .roadmap-card {
+      position: relative;
+      z-index: 1;
+      padding: 26px;
+      border-radius: 26px;
+      text-align: center;
+    }
+
+    .roadmap-node {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      color: #06110d;
+      background: var(--mint);
+      box-shadow: 0 0 30px rgba(0, 230, 166, 0.26);
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+    }
+
+    .roadmap-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .roadmap-card p {
+      margin-top: 6px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .schedule-console {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      padding: 22px;
+      border-radius: 30px;
+      background: rgba(4, 8, 13, 0.58);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--inset);
+    }
+
+    .widget {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .widget-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+      border-radius: 14px;
+      color: var(--mint);
+      background: rgba(0, 230, 166, 0.08);
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+    }
+
+    .widget strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .payment-console {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 28px;
+      align-items: stretch;
+      padding-bottom: 96px;
+    }
+
+    .contact-panel,
+    .secure-panel {
+      padding: 30px;
+      border-radius: 34px;
+    }
+
+    .contact-panel h2,
+    .secure-panel h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 16px 0 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--mint);
+      background: rgba(0, 230, 166, 0.08);
+      border: 1px solid rgba(0, 230, 166, 0.16);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-action {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-height: 62px;
+      margin-top: 14px;
+      padding: 0 18px;
+      border-radius: 18px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 800;
+      transition: transform 220ms ease;
+    }
+
+    .contact-action:hover {
+      transform: translateY(-4px);
+    }
+
+    .contact-action.primary {
+      color: #06110d;
+      background: linear-gradient(180deg, var(--mint), var(--mint-deep));
+      border-color: transparent;
+    }
+
+    .payment-field {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(4, 8, 13, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--inset);
+    }
+
+    .payment-number strong {
+      display: block;
+      color: var(--white);
+      font-family: "Inter", sans-serif;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+
+    .payment-number span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .field-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .field-actions button,
+    .field-actions a {
+      display: inline-grid;
+      place-items: center;
+      min-width: 52px;
+      height: 42px;
+      border: 0;
+      border-radius: 14px;
+      color: #06110d;
+      background: var(--gold);
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .field-actions a {
+      background: var(--mint);
+    }
+
+    .send-note {
+      margin-top: 18px;
+      color: var(--gold);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.035);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(4, 1fr);
+      gap: 28px;
+      padding: 54px 0 38px;
+    }
+
+    .footer h3 {
+      margin-bottom: 14px;
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .footer p,
+    .footer a {
+      display: block;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      color: var(--cyan);
+    }
+
+    .footer-bottom {
+      padding: 18px 0 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--disabled);
+      text-align: center;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: inline-flex;
+      }
+
+      /* Removed fixed positioning overrides */
+
+      .nav-toggle:checked ~ .mobile-drawer {
+        display: block;
+      }
+
+      .hero,
+      .narrative,
+      .comparison,
+      .pricing-grid,
+      .payment-console {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        grid-template-rows: auto auto auto;
+        padding-top: 116px;
+      }
+
+      .hero-lead {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-visual {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 560px;
+      }
+
+      .hero-rest {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+      }
+
+      .comparison {
+        gap: 18px;
+      }
+
+      .arrow-core {
+        margin: 0 auto;
+        transform: rotate(90deg);
+      }
+
+      .bento-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-card.large,
+      .feature-card.medium,
+      .feature-card.small {
+        grid-column: span 1;
+      }
+
+      .qualification,
+      .roadmap,
+      .schedule-console {
+        grid-template-columns: 1fr;
+      }
+
+      .qualification::before,
+      .roadmap::before {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .nav-shell {
+        top: 10px;
+      }
+
+      .nav-dock {
+        height: 64px;
+        padding-inline: 16px 10px;
+      }
+
+      .brand {
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 72px 0 56px;
+      }
+
+      .hero-copy-area {
+        display: contents;
+      }
+
+      .hero-lead {
+        order: 1;
+        width: 100%;
+      }
+
+      .hero-visual {
+        order: 2;
+      }
+
+      .hero-rest {
+        order: 3;
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero-actions,
+      .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 470px;
+      }
+
+      .spotlight-ring {
+        width: min(100%, 390px);
+      }
+
+      .portrait {
+        height: 410px;
+      }
+
+      .portrait-badge {
+        bottom: calc(12% - 5px);
+        width: min(78%, 292px);
+        padding: 12px 14px;
+        border-radius: 18px;
+      }
+
+      .portrait-badge strong {
+        font-size: 15px;
+      }
+
+      .portrait-badge span {
+        font-size: 13px;
+      }
+
+      .stat-card {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        min-width: 0;
+        width: 100%;
+        margin-top: 10px;
+        animation: none;
+      }
+
+      .hero-visual {
+        align-content: start;
+      }
+
+      .bento-grid,
+      .price-meta,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .payment-field {
+        grid-template-columns: 1fr;
+      }
+
+      .field-actions {
+        width: 100%;
+      }
+
+      .field-actions button,
+      .field-actions a {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora mint"></div>
+  <div class="aurora gold"></div>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+  <span class="particle"></span>
+
+  <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="Toggle navigation">
+  <header class="nav-shell">
+    <nav class="nav-dock" aria-label="Primary navigation">
+      <a class="brand" href="#home">
+        <img src="logo.png" alt="At Taheel Academy logo">
+        <span>AT TAHEEL</span>
+      </a>
+      
+      <div class="language-switcher notranslate" translate="no" role="group" aria-label="Choose language">
+        <button type="button" data-language="ar" data-label="AR" translate="no" aria-label="Arabic"></button>
+        <button type="button" data-language="en" data-label="EN" translate="no" aria-label="English"></button>
+        <button type="button" data-language="bn" data-label="BN" translate="no" aria-label="Bangla"></button>
+      </div>
+
+      <a class="help-link" href="#payment">Help</a>
+
+      <ul class="nav-links">
+        <li><a class="active" href="#course">কোর্স</a></li>
+        <li><a href="#instructor">ইন্সট্রাক্টর</a></li>
+        <li><a href="#pricing">ফি</a></li>
+        <li><a href="#schedule">শিডিউল</a></li>
+        <li><a href="#payment">পেমেন্ট</a></li>
+      </ul>
+      <a class="student-profile-button notranslate" href="student-account.html" translate="no" aria-label="Create student profile" data-student-profile>+</a>
+      <a class="nav-cta" href="#payment">ভর্তি হন</a>
+      <label class="mobile-menu-button" for="nav-toggle" aria-label="Open navigation">☰</label>
+    </nav>
+  </header>
+  <nav class="mobile-drawer" aria-label="Mobile navigation">
+    <a href="#course">কোর্স</a>
+    <a href="#instructor">ইন্সট্রাক্টর</a>
+    <a href="#pricing">ফি</a>
+    <a href="#schedule">শিডিউল</a>
+    <a href="#payment">পেমেন্ট</a>
+    <a href="#payment" class="mobile-help-link">Help / সাহায্য</a>
+  </nav>
+  <div id="google_translate_element" aria-hidden="true"></div>
+  <main>
+    <section class="container hero" id="home">
+      <div class="hero-copy-area">
+        <div class="hero-lead reveal">
+
+          <h1>অনলাইন ইলমুস সরফ কোর্স <span class="gradient-text">আরবী ব্যাকরণ সহজে শিখুন</span></h1>
+        </div>
+        <div class="hero-rest reveal">
+          <p class="hero-copy">
+            দাখিল ও জেনারেল মাদ্রাসা ব্যাকগ্রাউন্ডের শিক্ষার্থীদের জন্য বিশেষভাবে ডিজাইন করা অনলাইন আরবি ব্যাকরণ কোর্স। চলুন সহজ ও প্র্যাকটিক্যাল পাঠে আরবি শিখি।
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#payment">এখনই ভর্তি হন</a>
+            <a class="btn btn-secondary" href="#schedule">ফ্রি ক্লাস দেখুন</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" id="instructor">
+        <div class="spotlight-ring">
+          <img class="portrait" src="instructor.jpg" alt="উস্তায ফায়েজ বিন মাহমুদ">
+          <div class="portrait-badge" role="group" aria-label="Instructor qualification">
+            <h3><strong>উস্তায ফায়েজ বিন মাহমুদ</strong></h3>
+            <span>লেকচারার,(ভারপ্রাপ্ত) IIUC</span>
+            <span>ম্যানেজমেন্ট এন্ড ইসলামিক স্টাডিজ বিভাগ</span>
+            <span>ইন্টারন্যাশনাল ইসলামিক ইউনিভার্সিটি চট্টগ্রাম</span>
+          </div>
+        </div>
+        <div class="stat-card stat-one"><strong>৫ ধাপের কোর্স</strong><span>Structured Learning</span></div>
+        <div class="stat-card stat-two"><strong>২-৩ মাসে সম্পন্ন</strong><span>Fast Track</span></div>
+        <div class="stat-card stat-three"><strong>লাইভ সাপোর্ট</strong><span>Ustaz Helpline</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="course">
+      <div class="container narrative glass reveal">
+        <div>
+          <span class="eyebrow">Story &amp; Aspiration</span>
+          <h2>কোরআনের অর্থ সরাসরি আরবি থেকে বোঝার স্বপ্ন কি অধরাই রয়ে গেল?</h2>
+          <p>
+            বুকের ভেতর হাহাকার থেকেই গেলো। মূলত এই স্বপ্ন পূরণ করা ইলমুন নাহু ও সরফের দক্ষতা ব্যতীত প্রায় অসম্ভব। নাহু ও সরফ হলো আরবি ব্যাকরণের দুটি অবিচ্ছেদ্য অংশ। একটি অপরটির উপর নির্ভরশীল।
+          </p>
+          <p>
+            ইলমুস সরফ ও ইলমুন নাহু, উভয় শাস্ত্রে দক্ষতা অর্জন করতে পারলেই একজন শিক্ষার্থী সরাসরি হরকতবিহীন আরবি পড়ার যোগ্যতা এবং আরবি নস থেকে অর্থ বের করার সক্ষমতা অর্জন করতে পারেন।
+          </p>
+        </div>
+        <aside class="quote-panel">
+          <div>
+            <div class="arabic">النحو أبو العلوم والصرف أمها</div>
+            <div class="quote-meaning">(অর্থাৎ, নাহু হলো আরবি জ্ঞানের পিতা, আর সরফ হলো তার মা)</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Problem to Solution</span>
+          <h2 class="section-title">মুখস্থের চাপ থেকে নিয়মভিত্তিক দক্ষতায়</h2>
+        </div>
+        <div class="comparison">
+          <article class="comparison-card problem glass reveal">
+            <h3>ইলমুস সরফ কোর্স কী?</h3>
+            <p>
+              আরবি ক্রিয়া, শব্দমূল ও মাসদারের রূপ অসংখ্য। এগুলো আলাদা আলাদা মুখস্থ করা বাস্তবসম্মত নয়। ইলমুস সরফ শব্দের রূপান্তরের নিয়ম, ওজন ও প্যাটার্ন বুঝিয়ে দেয়।
+            </p>
+          </article>
+          <div class="arrow-core reveal">→</div>
+          <article class="comparison-card solution glass reveal">
+            <h3>আমাদের সমাধান</h3>
+            <p>
+              এই কোর্সে ধাপে ধাপে সাজানো পদ্ধতিতে শত শত শব্দরূপের প্যাটার্ন শেখানো হয়। ফলে মুখস্থের চাপ কমে, নিয়মভিত্তিক বোঝাপড়া তৈরি হয় এবং আরবি পাঠ সহজ হয়।
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Course Intelligence</span>
+          <h2 class="section-title">প্রিমিয়াম বেন্টো লার্নিং সিস্টেম</h2>
+          <p class="section-copy">প্রতিটি ফিচার শিক্ষার্থীকে দ্রুত বোঝা, অনুশীলন, মূল্যায়ন এবং ধারাবাহিক সহায়তার ভেতর রাখে।</p>
+        </div>
+        <div class="bento-grid">
+          <article class="feature-card large glass reveal">
+            <div class="feature-icon">01</div>
+            <h3>সরাসরি কোরআন আয়াত থেকে অনুশীলন</h3>
+            <p>সরাসরি কোরআনের আয়াতের نص বা টেক্সট থেকে প্র্যাকটিক্যাল অনুশীলন।</p>
+            <div class="mini-meter"><span style="--w: 92%"></span></div>
+          </article>
+          <article class="feature-card large glass reveal">
+            <div class="feature-icon">02</div>
+            <h3>৫টি ধাপে সাজানো কোর্স</h3>
+            <p>প্রতিটি ধাপ অতিক্রম করার জন্য Level Assessment Exam-এ উত্তীর্ণ হওয়া বাধ্যতামূলক।</p>
+            <div class="mini-meter"><span style="--w: 84%"></span></div>
+          </article>
+          <article class="feature-card medium glass reveal">
+            <div class="feature-icon">03</div>
+            <h3>নিশ্চিতভাবে পারদর্শীতা</h3>
+            <p>সকল ধাপে উত্তীর্ণ হয়ে কোর্স সম্পন্ন করলে ইলমুস সরফে দৃঢ় দক্ষতা তৈরি হবে, ইনশা-আল্লাহ।</p>
+          </article>
+          <article class="feature-card medium glass reveal">
+            <div class="feature-icon">04</div>
+            <h3>২-৩ মাসে কোর্স সম্পন্ন</h3>
+            <p>কোর্সটি লেভেল ভিত্তিক হওয়ায় ২-৩ মাসের মধ্যেও সফলভাবে সম্পন্ন করা সম্ভব।</p>
+          </article>
+          <article class="feature-card medium glass reveal">
+            <div class="feature-icon">05</div>
+            <h3>১ মাস ফ্রি টিচিং ও ৫০% ডিসকাউন্ট</h3>
+            <p>নির্ধারিত সময়ের চেয়ে বেশি লাগলে আরও এক মাস ফ্রি টিচিং এবং পরবর্তী সময়ে ৫০% ডিসকাউন্টে Admission Renewal Service।</p>
+          </article>
+          <article class="feature-card small glass reveal">
+            <div class="feature-icon">06</div>
+            <h3>তত্ত্বীয় বনাম প্র্যাকটিক্যাল</h3>
+            <p>প্রতিটি ধাপ বৈজ্ঞানিক পদ্ধতিতে সাজানো; نظري ধারার তুলনায় تطبيقي নির্ভরতা বেশি।</p>
+          </article>
+          <article class="feature-card small glass reveal">
+            <div class="feature-icon">07</div>
+            <h3>Extra Support ও Ustaz Helpline</h3>
+            <p>পিছিয়ে পড়া শিক্ষার্থীদের জন্য Extra Support, ক্লাস সময়ের বাইরে Ustaz Helpline, সার্টিফিকেট ও টোকেন সুবিধা।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Qualification Timeline</span>
+          <h2 class="section-title">কোর্সে অংশগ্রহণের যোগ্যতা</h2>
+        </div>
+        <div class="qualification">
+          <article class="step-card reveal"><div class="step-number">1</div><p>পবিত্র কোরআন বিশুদ্ধভাবে পড়তে জানতে হবে।</p></article>
+          <article class="step-card reveal"><div class="step-number">2</div><p>মৌলিক পর্যায়ের আরবি হাতে লিখতে পারতে হবে।</p></article>
+          <article class="step-card reveal"><div class="step-number">3</div><p>স্মার্টফোন ও নিরবিচ্ছিন্ন ইন্টারনেট সংযোগ থাকা।</p></article>
+          <article class="step-card reveal"><div class="step-number">4</div><p>একাগ্রতা, পরিশ্রম ও ধারাবাহিকতা বজায় রাখার মানসিকতা থাকা।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pricing 3.0</span>
+          <h2 class="section-title">আপনার ব্যাকগ্রাউন্ড অনুযায়ী ভর্তি প্ল্যান</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card madrasha glass reveal">
+            <span class="price-tag">মাদ্রাসা ব্যাকগ্রাউন্ড</span>
+            <h3>মাদ্রাসা ব্যাকগ্রাউন্ড</h3>
+            <div class="price-number">৩৯০০ টাকা</div>
+            <div class="price-meta">
+              <div><strong>মেয়াদ</strong>৪-৫ মাস</div>
+              <div><strong>টার্গেট</strong>৮ম শ্রেণী থেকে ফাযিল-কামিল পর্যায়</div>
+            </div>
+            <ul class="included">
+              <li>Live Classes</li>
+              <li>Assessment Exams</li>
+              <li>Helpline</li>
+              <li>Certificate</li>
+              <li>Renewal Benefits</li>
+            </ul>
+          </article>
+          <article class="price-card general glass reveal">
+            <div class="ribbon">Most Popular</div>
+            <span class="price-tag">জেনারেল ব্যাকগ্রাউন্ড</span>
+            <h3>জেনারেল ব্যাকগ্রাউন্ড</h3>
+            <div class="price-number">৫৩০০ টাকা</div>
+            <div class="price-meta">
+              <div><strong>মেয়াদ</strong>৬-৭ মাস</div>
+              <div><strong>টার্গেট</strong>১০ম শ্রেণী থেকে বিশ্ববিদ্যালয় পর্যায়</div>
+            </div>
+            <ul class="included">
+              <li>Live Classes</li>
+              <li>Assessment Exams</li>
+              <li>Helpline</li>
+              <li>Certificate</li>
+              <li>Renewal Benefits</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Program Roadmap</span>
+          <h2 class="section-title">গুরুত্বপূর্ণ তারিখ ও ক্লাস কমান্ড সেন্টার</h2>
+        </div>
+        <div class="roadmap">
+          <article class="roadmap-card glass reveal"><div class="roadmap-node">1</div><h3>ফ্রি ক্লাস</h3><p>০৫ জুন ২০২৬</p></article>
+          <article class="roadmap-card glass reveal"><div class="roadmap-node">2</div><h3>ভর্তি শেষ</h3><p>১৫ জুন ২০২৬</p></article>
+          <article class="roadmap-card glass reveal"><div class="roadmap-node">3</div><h3>ক্লাস শুরু</h3><p>২০ জুন ২০২৬</p></article>
+        </div>
+        <div class="schedule-console reveal">
+          <article class="widget"><div class="widget-icon">D</div><strong>ক্লাস শিডিউল</strong><p>সপ্তাহে ৩ দিন: বৃহস্পতিবার + শনি + সোম অথবা জুমাবার + রবিবার + মঙ্গলবার।</p></article>
+          <article class="widget"><div class="widget-icon">T</div><strong>ক্লাসের সময়</strong><p>দিনের স্লট ফজরের পর থেকে শুরু অথবা রাতের স্লট মাগরিবের পর থেকে শুরু।</p></article>
+          <article class="widget"><div class="widget-icon">2H</div><strong>ক্লাসের ব্যাপ্তিকাল</strong><p>প্রতিটি সেশন দীর্ঘ ২ ঘণ্টা ব্যাপী অনুষ্ঠিত হবে।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container payment-console" id="payment">
+      <article class="contact-panel glass reveal">
+        <span class="eyebrow">Office Support</span>
+        <h2>ভর্তি সহায়তার জন্য সরাসরি যোগাযোগ করুন</h2>
+        <a class="contact-action primary" href="https://wa.me/8801310787139"><span>WhatsApp</span><span>শুধুমাত্র WhatsApp: 01310787139</span></a>
+        <a class="contact-action" href="https://www.facebook.com/AtTaheelAcademy"><span>Facebook</span><span>অথবা At Taheel Academy-এর Facebook Page-এ নক করুন।</span></a>
+      </article>
+      <article class="secure-panel glass reveal">
+        <span class="eyebrow">Secure Payment Console</span>
+        <h2>Direct Merchant Payment Terminal</h2>
+        <div class="trust-badge">✓ Verified Payment Numbers</div>
+        <div class="payment-field">
+          <div class="payment-number"><strong>01837772215</strong><span>বিকাশ / নগদ Personal</span></div>
+          <div class="field-actions">
+            <button type="button" data-copy="01837772215">Copy</button>
+            <a href="https://wa.me/8801837772215">WA</a>
+            <a href="tel:01837772215">Call</a>
+          </div>
+        </div>
+        <div class="payment-field">
+          <div class="payment-number"><strong>01310787139</strong><span>বিকাশ / নগদ Personal</span></div>
+          <div class="field-actions">
+            <button type="button" data-copy="01310787139">Copy</button>
+            <a href="https://wa.me/8801310787139">WA</a>
+            <a href="tel:01310787139">Call</a>
+          </div>
+        </div>
+        <div class="send-note">Send Money করুন</div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>At Taheel Academy</h3>
+        <p>একটি প্রিমিয়াম ইসলামিক শিক্ষা প্ল্যাটফর্ম, যেখানে আধুনিক প্রযুক্তি ও ঐতিহ্যবাহী জ্ঞানের সমন্বয়ে আরবি শেখানো হয়।</p>
+      </div>
+      <div>
+        <h3>Academy</h3>
+        <a href="#home">About</a>
+        <a href="#course">Mission</a>
+        <a href="#schedule">Vision</a>
+      </div>
+      <div>
+        <h3>Courses</h3>
+        <a href="#course">All Courses</a>
+        <a href="#course">Arabic Grammar</a>
+        <a href="#pricing">Advanced Studies</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="https://wa.me/8801310787139">WhatsApp</a>
+        <a href="https://www.facebook.com/AtTaheelAcademy">Facebook</a>
+        <a href="#payment">Support</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="#payment">Privacy Policy</a>
+        <a href="#payment">Terms</a>
+        <a href="#payment">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 At Taheel Academy</div>
+  </footer>
+
+  <script>
+    const VISITOR_NOTIFICATION_ENDPOINT = "";
+    const supportedLanguages = ["ar", "en", "bn"];
+    let googleTranslateReady = false;
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: "bn",
+        includedLanguages: "ar,en,bn",
+        autoDisplay: false
+      }, "google_translate_element");
+
+      googleTranslateReady = true;
+    }
+
+    const getSelectedLanguage = () => {
+      const language = localStorage.getItem("selectedLanguage") || "bn";
+      return supportedLanguages.includes(language) ? language : "bn";
+    };
+
+    const setTranslateCookie = (language) => {
+      const expires = "expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      const value = language === "bn" ? "" : `/bn/${language}`;
+
+      document.cookie = `googtrans=${value}; ${expires}; path=/`;
+
+      if (location.hostname && location.hostname !== "localhost") {
+        document.cookie = `googtrans=${value}; ${expires}; path=/; domain=${location.hostname}`;
+      }
+    };
+
+    const updateLanguageButtons = (language) => {
+      document.querySelectorAll("[data-language]").forEach((button) => {
+        button.textContent = "";
+        button.classList.toggle("is-active", button.dataset.language === language);
+      });
+    };
+
+    const applyGoogleLanguage = (language, attempt = 0) => {
+      const combo = document.querySelector(".goog-te-combo");
+
+      if (!combo) {
+        if (attempt < 30) {
+          setTimeout(() => applyGoogleLanguage(language, attempt + 1), 200);
+        }
+        return;
+      }
+
+      combo.value = language === "bn" ? "" : language;
+      combo.dispatchEvent(new Event("change"));
+    };
+
+    document.querySelectorAll("[data-language]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const language = button.dataset.language;
+        localStorage.setItem("selectedLanguage", language);
+        document.documentElement.lang = language;
+        setTranslateCookie(language);
+        updateLanguageButtons(language);
+        applyGoogleLanguage(language);
+      });
+    });
+
+    const selectedLanguage = getSelectedLanguage();
+    document.documentElement.lang = selectedLanguage;
+    updateLanguageButtons(selectedLanguage);
+
+    const loadStudentProfileButton = () => {
+      const profileButton = document.querySelector("[data-student-profile]");
+      if (!profileButton) return;
+
+      try {
+        const profile = JSON.parse(localStorage.getItem("studentProfile") || "{}");
+        if (!profile.photo) return;
+
+        profileButton.textContent = "";
+        const image = document.createElement("img");
+        image.src = profile.photo;
+        image.alt = profile.name ? `${profile.name} profile photo` : "Student profile photo";
+        profileButton.appendChild(image);
+        profileButton.setAttribute("aria-label", profile.name ? `${profile.name} student profile` : "Student profile");
+      } catch {
+        localStorage.removeItem("studentProfile");
+      }
+    };
+
+    loadStudentProfileButton();
+
+    const languageSwitcher = document.querySelector(".language-switcher");
+    const studentProfileButton = document.querySelector("[data-student-profile]");
+    const updateLanguageSwitcherVisibility = () => {
+      const shouldHide = window.scrollY > 12;
+      if (languageSwitcher) languageSwitcher.classList.toggle("is-hidden", shouldHide);
+      if (studentProfileButton) studentProfileButton.classList.toggle("is-hidden", shouldHide);
+    };
+
+    updateLanguageSwitcherVisibility();
+    window.addEventListener("scroll", updateLanguageSwitcherVisibility, { passive: true });
+
+    const notifyPageLoad = () => {
+      if (!VISITOR_NOTIFICATION_ENDPOINT) return;
+
+      const payload = JSON.stringify({
+        event: "page_load",
+        page: location.href,
+        language: selectedLanguage,
+        referrer: document.referrer,
+        userAgent: navigator.userAgent,
+        time: new Date().toISOString()
+      });
+
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(VISITOR_NOTIFICATION_ENDPOINT, new Blob([payload], { type: "application/json" }));
+        return;
+      }
+
+      fetch(VISITOR_NOTIFICATION_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true
+      }).catch(() => {});
+    };
+
+    notifyPageLoad();
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const targetId = link.getAttribute("href").slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.pushState(null, "", `#${targetId}`);
+
+        const navToggle = document.getElementById("nav-toggle");
+        if (navToggle) navToggle.checked = false;
+      });
+    });
+
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    if (navToggle && mobileMenuButton) {
+      mobileMenuButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        navToggle.checked = !navToggle.checked;
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const value = button.getAttribute("data-copy");
+        const original = button.textContent;
+
+        const showCopied = () => {
+          button.textContent = "Copied";
+          setTimeout(() => {
+            button.textContent = original;
+          }, 1200);
+        };
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(value);
+            showCopied();
+            return;
+          }
+
+          const textArea = document.createElement("textarea");
+          textArea.value = value;
+          textArea.setAttribute("readonly", "");
+          textArea.style.position = "fixed";
+          textArea.style.opacity = "0";
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          textArea.remove();
+          showCopied();
+        } catch {
+          button.textContent = value;
+        }
+      });
+    });
+
+    document.querySelectorAll(".mobile-drawer a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("nav-toggle").checked = false;
+      });
+    });
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
