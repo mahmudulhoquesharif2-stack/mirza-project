@@ -39,15 +39,12 @@ export default function NavBar() {
         {/* Collapsible menu */}
         <div className={`flex flex-col md:flex-row items-center gap-2 mt-4 md:mt-0 ${menuOpen ? 'block' : 'hidden'} md:block`}>
           {/* Language Switcher */}
-          <div
-            className={`language-switcher notranslate flex items-center gap-1 p-1 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.12)] backdrop-blur-[18px] transition-all duration-250 ease-out ${
-              isScrolled
-                ? 'max-w-0 opacity-0 invisible pointer-events-none'
-                : 'max-w-[250px] opacity-100 visible'
-            }`}
-          >
-            <LanguageSwitcher />
-          </div>
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+
+{/* Language switcher container */}
+<div className="flex items-center gap-2 p-2 bg-white/5 rounded-full ml-4 mt-[3px]">
+  <LanguageSwitcher />
+</div>
 
           {/* Navigation links */}
           <ul className="nav-links flex flex-col md:flex-row items-center gap-2 list-none m-0 p-0">
