@@ -221,6 +221,18 @@ export default function Home() {
           </div>
         </section>
       </div>
+        <footer className="border-t border-white/10 bg-[#090d13]">
+    <div className="max-w-7xl mx-auto px-4 py-6 text-center">
+      <a
+        href="https://www.facebook.com/share/198PM8ju2P/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-gray-400 hover:text-[#00e6a6] transition-colors duration-300"
+      >
+        Developed by Mahmud - Sharif
+      </a>
+    </div>
+  </footer>
     </>
   );
 }
